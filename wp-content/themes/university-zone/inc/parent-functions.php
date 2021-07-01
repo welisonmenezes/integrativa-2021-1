@@ -32,7 +32,7 @@ function education_zone_site_header(){
 
     ?>
 
-    <header id="masthead" class="site-header header-two" role="banner" itemscope itemtype="https://schema.org/WPHeader">
+    <header id="masthead" class="site-header header-two" itemscope itemtype="https://schema.org/WPHeader">
 
     <div class="header-holder">
 
@@ -168,7 +168,7 @@ function education_zone_site_header(){
 
                 <div class="form-section">
 
-                <button href="javascript:void(0)" id="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button id="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
 
                     <div class="example">                       
 
@@ -292,7 +292,7 @@ function education_zone_mobile_header(){
 
 
 
-                <nav class="main-navigation" role="navigation">
+                <nav class="main-navigation">
 
                     <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'mobile-primary-menu' ) ); ?>
 
@@ -302,7 +302,7 @@ function education_zone_mobile_header(){
 
                     if( has_nav_menu( 'secondary' ) ){ ?>
 
-                        <nav class="secondary-nav" role="navigation"> 
+                        <nav class="secondary-nav"> 
 
                             <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'mobile-secondary-menu', 'fallback_cb' => false ) ); ?>
 

@@ -12,7 +12,7 @@
 
 <div class="container">
 
-    <div class="thumb-text">
+    <ul class="thumb-text">
 
     <?php
 
@@ -104,7 +104,7 @@
 
         ?>
 
-    </div>
+    </ul>
 
 </div>
 

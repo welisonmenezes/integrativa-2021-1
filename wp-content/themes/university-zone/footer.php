@@ -32,7 +32,7 @@ if( is_home() || ! $enabled_sections ||  ! ( is_front_page()  || is_page_templat
 
 
 
-	<footer id="colophon" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+	<div id="colophon" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
 
 	    <div class="container">
 
@@ -126,7 +126,7 @@ if( is_home() || ! $enabled_sections ||  ! ( is_front_page()  || is_page_templat
 
 		</div>
 
-	</footer><!-- #colophon -->
+	</div><!-- #colophon -->
 
     <div class="footer-overlay"></div>
 

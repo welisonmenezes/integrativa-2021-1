@@ -10,7 +10,7 @@ function university_zone_primary_nav(){
 
 	?>
 
-	 <nav id="site-navigation" class="main-navigation" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">                        
+	 <nav id="site-navigation" class="main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">                        
 
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 
@@ -28,7 +28,7 @@ function university_zone_secondary_nav(){
 
 	if( has_nav_menu( 'secondary' ) ){ ?>
 
-        <nav class="secondary-navigation" role="navigation"> 
+        <nav class="secondary-navigation"> 
 
             <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'fallback_cb' => false ) ); ?>
 

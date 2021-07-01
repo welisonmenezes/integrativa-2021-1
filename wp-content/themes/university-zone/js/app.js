@@ -1,4 +1,4 @@
-var items = document.querySelectorAll('.gallery a');
+var items = document.querySelectorAll('#gallery a');
 for (var i = 0; i < items.length; i++) {
     var item = items[i];
     item.setAttribute('data-fslightbox', 'gallery');

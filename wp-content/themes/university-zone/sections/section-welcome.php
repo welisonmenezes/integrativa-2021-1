@@ -80,7 +80,7 @@ $section_title  = get_theme_mod( 'education_zone_welcome_section_title' );
 
 </div>
 
-<div class="statcounter-wrap" style="background-image: url(<?php echo esc_url( get_stylesheet_directory_uri() . '/images/stats.jpg' ); ?>">
+<div class="statcounter-wrap" style="background-image: url(<?php echo esc_url( get_stylesheet_directory_uri() . '/images/stats.jpg' ); ?>);">
 
     <?php 
 

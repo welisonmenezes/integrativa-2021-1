@@ -2622,7 +2622,7 @@ input[type="submit"]:focus{
 
 
 
-.student-stories blockquote cite img{
+.student-stories blockquote .cite img{
 
     width: 10rem;
 
@@ -2646,7 +2646,7 @@ input[type="submit"]:focus{
 
 
 
-.student-stories blockquote cite span{
+.student-stories blockquote .cite span{
 
     font-size: 2rem;
 
@@ -3372,7 +3372,8 @@ input[type="submit"]:focus{
 
 
 
-.photos-gallery .gallery-item{
+.photos-gallery .gallery-item,
+.photos-gallery .blocks-gallery-item{
 
     position: relative;
 
@@ -3380,7 +3381,8 @@ input[type="submit"]:focus{
 
 
 
-.photos-gallery .gallery-item img{
+.photos-gallery .gallery-item img,
+.photos-gallery .blocks-gallery-item img{
 
     vertical-align: top;
 
@@ -3390,15 +3392,16 @@ input[type="submit"]:focus{
 
 
 
-.photos-gallery .gallery-item figcaption{
+.photos-gallery .gallery-item figcaption,
+.photos-gallery .blocks-gallery-item .blocks-gallery-item__caption{
 
     position: absolute;
 
     top: 0;
 
-    left: 15px;
+    /* left: 15px; */
 
-    width: calc(100% - 30px);
+    /* width: calc(100% - 30px); */
 
     height: 100%;
 
@@ -3433,12 +3436,13 @@ input[type="submit"]:focus{
 
 
 .photos-gallery .gallery-item:hover figcaption,
-
+.photos-gallery .blocks-gallery-item:hover .blocks-gallery-item__caption,
 .photos-gallery .gallery-item:focus figcaption,
-
+.photos-gallery .blocks-gallery-item:focus .blocks-gallery-item__caption,
 .photos-gallery .gallery-item:hover a:after,
-
-.photos-gallery .gallery-item:focus a:after{
+.photos-gallery .blocks-gallery-item:hover a:after,
+.photos-gallery .gallery-item:focus a:after,
+.photos-gallery .blocks-gallery-item:focus a:after{
 
     opacity: 1;
 
@@ -3448,7 +3452,8 @@ input[type="submit"]:focus{
 
 
 
-.photos-gallery .gallery-item a{
+.photos-gallery .gallery-item a,
+.photos-gallery .blocks-gallery-item a{
 
     display: block;
 
@@ -3458,7 +3463,8 @@ input[type="submit"]:focus{
 
 
 
-.photos-gallery .gallery-item a:after{
+.photos-gallery .gallery-item a:after,
+.photos-gallery .blocks-gallery-item a:after{
 
     position: absolute;
 
@@ -5119,4 +5125,33 @@ input[type="submit"]:focus{
 
 .navigation.post-navigation {
     display: none !important;
+}
+
+.photos-gallery h2 {
+    margin-bottom: 5rem;
+}
+
+.wp-block-embed {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wp-block-column .wp-block-image figure {
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #ss-floating-bar {
+        display: none !important;
+    }
+
+    .banner .banner-text h2.title {
+        font-size: 5rem;
+    }
+    .banner .banner-text h3.title {
+        font-size: 2.8rem;
+        line-height: 36px;
+    }
 }

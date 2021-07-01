@@ -79,6 +79,7 @@ $table_prefix = 'wp3x_';
  */
 define( 'WP_DEBUG', false );
 
+define( 'WP_CACHE', true ); // Added by Hummingbird
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */

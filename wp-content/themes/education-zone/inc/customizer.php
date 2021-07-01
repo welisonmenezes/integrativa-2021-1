@@ -198,7 +198,7 @@ function education_zone_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'education_zone_banner_read_more',
         array(
-            'default'=> __( 'Read More', 'education-zone' ),
+            'default'=> __( 'Leia Mais', 'education-zone' ),
             'sanitize_callback'=> 'sanitize_text_field'
             )
         );
@@ -206,7 +206,7 @@ function education_zone_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'education_zone_banner_read_more',
         array(
-              'label' => __( 'Read More Texts', 'education-zone' ),
+              'label' => __( 'Leia Mais', 'education-zone' ),
               'section' => 'education_zone_banner_settings', 
               'type' => 'text',
             ));
@@ -998,7 +998,7 @@ function education_zone_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'education_zone_blog_section_readmore',
         array(
-            'default' => __( 'Read More', 'education-zone' ),
+            'default' => __( 'Leia Mais', 'education-zone' ),
             'sanitize_callback' => 'sanitize_text_field',
         )
     );

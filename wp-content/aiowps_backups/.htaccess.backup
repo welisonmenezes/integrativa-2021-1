@@ -1,0 +1,100 @@
+
+
+
+# BEGIN SMUSH-WEBP
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{DOCUMENT_ROOT}/wp-content/smush-webp/disable_smush_webp !-f
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{DOCUMENT_ROOT}/wp-content/smush-webp/$1.webp -f
+RewriteRule wp-content/uploads/(.*.(?:png|jpe?g))$ wp-content/smush-webp/$1.webp [NC,T=image/webp]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header append Vary Accept env=WEBP_image
+</IfModule>
+
+<IfModule mod_mime.c>
+AddType image/webp .webp
+</IfModule>
+# END SMUSH-WEBP
+
+# BEGIN WordPress
+# As directivas (linhas) entre "BEGIN WordPress" e "END WordPress" são geradas
+# dinamicamente e não deverão ser modificadas através de filtros do WordPress.
+# Qualquer alteração às instruções entre estes marcadores será sobreposta.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /integrativa/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /integrativa/index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN SMUSH-WEBP
+# As directivas (linhas) entre "BEGIN SMUSH-WEBP" e "END SMUSH-WEBP" são geradas
+# dinamicamente e não deverão ser modificadas através de filtros do WordPress.
+# Qualquer alteração às instruções entre estes marcadores será sobreposta.
+
+# END SMUSH-WEBP
+
+
+
+# BEGIN WP-HUMMINGBIRD-GZIP
+# As directivas (linhas) entre "BEGIN WP-HUMMINGBIRD-GZIP" e "END WP-HUMMINGBIRD-GZIP" são geradas
+# dinamicamente e não deverão ser modificadas através de filtros do WordPress.
+# Qualquer alteração às instruções entre estes marcadores será sobreposta.
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+<IfModule mod_setenvif.c>
+<IfModule mod_headers.c>
+SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+</IfModule>
+</IfModule>
+<IfModule mod_filter.c>
+AddOutputFilterByType DEFLATE "application/atom+xml" \
+"application/javascript" \
+"application/json" \
+"application/ld+json" \
+"application/manifest+json" \
+"application/rdf+xml" \
+"application/rss+xml" \
+"application/schema+json" \
+"application/vnd.geo+json" \
+"application/vnd.ms-fontobject" \
+"application/x-font-ttf" \
+"application/x-font-opentype" \
+"application/x-font-truetype" \
+"application/x-javascript" \
+"application/x-web-app-manifest+json" \
+"application/xhtml+xml" \
+"application/xml" \
+"font/eot" \
+"font/opentype" \
+"font/otf" \
+"image/bmp" \
+"image/svg+xml" \
+"image/vnd.microsoft.icon" \
+"image/x-icon" \
+"text/cache-manifest" \
+"text/css" \
+"text/html" \
+"text/javascript" \
+"text/plain" \
+"text/vcard" \
+"text/vnd.rim.location.xloc" \
+"text/vtt" \
+"text/x-component" \
+"text/x-cross-domain-policy" \
+"text/xml"
+
+</IfModule>
+<IfModule mod_mime.c>
+AddEncoding gzip              svgz
+</IfModule>
+</IfModule>
+# END WP-HUMMINGBIRD-GZIP
